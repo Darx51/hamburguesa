@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css">
+  <link rel="stylesheet" href="css/excercises-dom.css">
+</head>
+<body>
+  
+  <header class="header">
+    <h1>Javascript Exercises</h1>
+  </header>
+
+  <!--Boton  is-active-->
+  <button class="panel-btn hamburger hamburger--spin " id="panel-btn" type="button">
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+  </button>
+
+  <!--Menu Aside--> 
+  <aside class="panel" id="panel">
+    <nav class="menu">
+      <a id="a" href="#seccion1">Seccion 1</a>
+      <a id="a" href="#seccion2">Seccion 2</a>
+      <a id="a" href="#seccion3">Seccion 3</a>
+      <a id="a" href="#seccion4">Seccion 4</a>
+      <a id="a" href="#seccion5">Seccion 5</a>
+    </nav>
+  </aside>
+
+  <!--Main-->
+  <main>
+    <section id="seccion1" class="section">
+      <h2>Seccion1</h2>
+        
+        <h2>Reloj Digital y Alarma Sonora</h2>
+          <div class="mostrarReloj" id="mostrarReloj"></div>
+        <div>
+          <button class="iniciarReloj" id="iniciarReloj">Iniciar Reloj</button>
+          <button class="DetenerReloj" id="detenerReloj">Detener Reloj</button>
+          <button class="iniciarAlarma" id="iniciarAlarma">Iniciar Alarma</button>
+          <button class="detenerAlarma" id="detenerAlarma">Detener Alarma</button>
+        </div>
+        
+    </section>
+
+    <section id="seccion2" class="section">
+      <h2>Seccion2</h2>
+    </section>
+    <section id="seccion3" class="section">
+      <h2>Seccion3</h2>
+    </section>
+    <section id="seccion4" class="section">
+      <h2>Seccion4</h2>
+    </section>
+    <section id="seccion5" class="section">
+      <h2>Seccion5</h2>
+    </section>
+  </main>
+
+
+  <script src="Js/index_dom.js" type="module"></script>
+</body>
+</html>

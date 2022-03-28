@@ -1,0 +1,123 @@
+:root{
+  --main-font:sans-serif;
+  --font-size:16px;
+  --main-color:#f7df1e;
+  --second-color:#222;
+  --main-modal-color:rgba(247,222,30,0.85);
+  --second-modal-color: rgba(34,34,34,0.85);
+  --container-width:1200px;   
+
+}
+
+html{
+  box-sizing: border-box;
+  font-family: var(--main-font);
+  font-size: var(--font-size);
+  scroll-behavior: smooth;            /* transicion suave de una a otra */    
+}
+
+
+*,                                /*Todo lo anterior se aplicara a before y after y a box-sizing heredara las propiedades de html */
+*:before,
+*:after{
+  box-sizing: inherit;
+}
+
+body{
+  margin: 0;        
+  overflow-x: hidden;       /*todo lo que salga en lo ancho se escondera*/
+  /* background: #05504c; */
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+/* INICIO */
+
+header{
+  position: sticky;
+  top: 0;
+  padding: 1rem;
+  background-color: var(--main-color);
+  color: var(--second-color);
+}
+
+.header h1{
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section{
+  padding: 2rem;
+  padding-top: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: var(--container-width);
+  min-height: 100vh;
+  text-align: center;
+  
+}
+
+.panel{
+  position: fixed;
+  z-index: 998;       /*entre mas grande el numero z-index mas encima de los demas elementos estara*/
+  top: 0;              /*se estirara a toda la pantalla*/
+  right: 0;
+  left: 0;
+  bottom: 0;          /*se estirara a toda la pantalla*/
+  width: 100%;
+  background-color: var(--second-modal-color);
+
+  opacity: 0;
+  transition: transform .3s ease, opacity 1.5s ease;       /*se aplicara la transicion a 'transform' */
+  /*transition: transform .3s ease;       /*se aplicara la transicion a 'transform' */
+  /*transform: translate(-100%, 0);      /*va a salir de arriba hacia abajo (0 en X, -100 en Y)*/
+}
+
+.panel.is-active{                  /*el panel aparecera en su posicion natural (0 en X, 0 en Y) con la clase extra llamada 'is-active' */
+  /*transform: translate(0,0);*/
+  opacity: 1;
+}
+
+.panel-btn{
+  position: fixed;
+  z-index: 999;     /*entre mas alto en z-index mas encima de los demas elementos estara*/
+  bottom: 1vh;      /*/* estara 1vh retirado del bottom*/*/
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  right: 1vh;         /* estara 1vh retirado de la derecha*/
+  padding: 0;
+  display: flex;    /*las lineas del menu se forman del after y before por eso indicamos flex paq se alinean una debajo de otra*/
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+}
+
+.menu{                /*como se van a compotar los elementos dentro de menu*/
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+
+.menu a{                /*comportamiento de elementos a*/
+  padding: 2rem;
+  width: inherit;
+  display: block;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--main-color);
+  transition: all 0.3s ease;
+}
+
+.menu a:hover{
+  font-weight: bold;
+  color: var(--second-color);
+  background-color: var(--main-modal-color);
+}
