@@ -71,31 +71,38 @@ header{
   width: 100%;
   background-color: var(--second-modal-color);
 
-  opacity: 0;
+  /*opacity: 0;
   transition: transform .3s ease, opacity 1.5s ease;       /*se aplicara la transicion a 'transform' */
-  /*transition: transform .3s ease;       /*se aplicara la transicion a 'transform' */
-  /*transform: translate(-100%, 0);      /*va a salir de arriba hacia abajo (0 en X, -100 en Y)*/
+  transition: transform .3s ease;       /*se aplicara la transicion a 'transform' */
+  transform: translate(0, -100%);      /*va a salir de arriba hacia abajo (0 en X, -100 en Y)*/
 }
 
 .panel.is-active{                  /*el panel aparecera en su posicion natural (0 en X, 0 en Y) con la clase extra llamada 'is-active' */
-  /*transform: translate(0,0);*/
-  opacity: 1;
+  transform: translate(0,0);
+  /*opacity: 1;*/
 }
 
 .panel-btn{
   position: fixed;
   z-index: 999;     /*entre mas alto en z-index mas encima de los demas elementos estara*/
   bottom: 1vh;      /*/* estara 1vh retirado del bottom*/*/
+  right: 1vw;        /* estara 1vh retirado de la derecha*/
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
-  right: 1vh;         /* estara 1vh retirado de la derecha*/
   padding: 0;
-  display: flex;    /*las lineas del menu se forman del after y before por eso indicamos flex paq se alinean una debajo de otra*/
+  display:flex;
   justify-content: center;
   align-items: center;
   background-color: var(--main-color);
+  right: 1vw; 
 }
+
+/*
+display:flex;    /*las lineas del menu se forman del after y before por eso indicamos flex paq se alinean una debajo de otra
+
+
+*/
 
 .menu{                /*como se van a compotar los elementos dentro de menu*/
   width: inherit;
