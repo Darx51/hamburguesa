@@ -3,7 +3,7 @@ export default function hamburgerMenu(panelBtn, panel, linkSecction){
   const d = document;
   
   d.addEventListener("click", e =>{   
-    console.log(e.target);    //solo me muestra a que le di click
+    //console.log(e.target);    //solo me muestra a que le di click
     
     //click lo asigno a document
     if(e.target.matches(panelBtn) || e.target.matches(`${panelBtn} *`) ){                           //si lo clickeado coincide con el parametro que me trajiste en panelBtn o en cualquier elemento dentro del 'panelBtn'
