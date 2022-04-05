@@ -16,9 +16,9 @@ d.addEventListener("DOMContentLoaded", e=>{           //Primero se carga el docu
   alarm("#iniciarAlarma", "#detenerAlarma", "../assets/pianoManAlarm.mp3");
 
   //Exercise 3
-  CuentaReg("datetime-local","Apr 05, 2022 00:50:00","Termino la cuenta regresiva");     //se pone '#' solo cuando se usa querySelector, 
+  CuentaReg("muestraCuentaReg","Dec 04, 2022 12:00:00","Termino la cuenta regresiva");     //se pone '#' solo cuando se usa querySelector, 
                                 //pero en este caso ponemos directamente getElementById 'id' en la funcion podemos pasarlo sin #
-
+//   Apr 05, 2022 00:50:00
 });
 
 
