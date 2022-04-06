@@ -82,6 +82,11 @@ header{
   /*opacity: 1;*/
 }
 
+
+.buttons{
+  display: flex;
+}
+
 .panel-btn{
   position: fixed;
   z-index: 999;     /*entre mas alto en z-index mas encima de los demas elementos estara*/
@@ -96,6 +101,35 @@ header{
   align-items: center;
   background-color: var(--main-color);
   right: 1vw; 
+}
+
+.btnScroll{
+  position: fixed;
+  z-index: 999;     /*entre mas alto en z-index mas encima de los demas elementos estara*/
+  bottom: 1vh;      /*/* estara 1vh retirado del bottom*/*/
+  right: calc(4.25rem + 1vw);        /* estara 4.25rem de ancho del boton de hamburguesa + 1vw retirado de la derecha*/
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  font-size:2rem;
+  font-weight:bold;
+  background-color: var(--main-color);
+  color:var(--second-color);
+  outline:0;
+  border:0;
+  cursor:pointer;
+  right: calc(4.25rem + 1vw);        /* estara 4.25rem de ancho del boton de hamburguesa + 1vw retirado de la derecha*/
+  transition: all 0.3s ease-out;
+}
+
+.btnScroll:hover{
+  background-color: var(--second-color);
+  color: var(--main-color);
+}
+
+.hidden-active{            /*escondera el botonScroll*/
+  visibility:hidden;
+  opacity: 0;
 }
 
 /*

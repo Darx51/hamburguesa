@@ -14,8 +14,8 @@ export function moveBall(e, ball, stage){
         console.log(limitStage);
 */
 
-  console.log(e.keyCode); // tambien podemos evaluarlo solo con el 'key'
-  console.log(e.key);
+  //console.log(e.keyCode); // tambien podemos evaluarlo solo con el 'key'
+  //console.log(e.key);
   
   
   switch(e.keyCode){

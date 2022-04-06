@@ -2,7 +2,7 @@ import hamburgerMenu from "./menu_hamburger.js";
 import {clock,alarm} from "./reloj_alarma.js";    //Ojo si se importan varias funciones, se utiliza destructuracion y no se exportan funciones por default
 import { shortcuts, moveBall } from "./keyboard.js";
 import { CuentaReg } from "./count_down.js";
-
+import {btnscroll}  from "./btn_scroll.js";     //como solo es una funcion por default, puede ir o no con {}
 
 
 
@@ -17,8 +17,10 @@ d.addEventListener("DOMContentLoaded", e=>{           //Primero se carga el docu
 
   //Exercise 3
   CuentaReg("muestraCuentaReg","Dec 04, 2022 12:00:00","Termino la cuenta regresiva");     //se pone '#' solo cuando se usa querySelector, 
-                                //pero en este caso ponemos directamente getElementById 'id' en la funcion podemos pasarlo sin #
-//   Apr 05, 2022 00:50:00
+                                //pero en este caso como usaremos directamente getElementById 'id' en la funcion podemos pasarlo sin #
+  
+  btnscroll("#btnScroll");
+
 });
 
 
