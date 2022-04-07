@@ -3,6 +3,7 @@ import {clock,alarm} from "./reloj_alarma.js";    //Ojo si se importan varias fu
 import { shortcuts, moveBall } from "./keyboard.js";
 import { CuentaReg } from "./count_down.js";
 import {btnscroll}  from "./btn_scroll.js";     //como solo es una funcion por default, puede ir o no con {}
+import dark_theme from "./tema_oscuro.js";
 
 
 
@@ -18,8 +19,12 @@ d.addEventListener("DOMContentLoaded", e=>{           //Primero se carga el docu
   //Exercise 3
   CuentaReg("muestraCuentaReg","Dec 04, 2022 12:00:00","Termino la cuenta regresiva");     //se pone '#' solo cuando se usa querySelector, 
                                 //pero en este caso como usaremos directamente getElementById 'id' en la funcion podemos pasarlo sin #
-  
+  //Exercise 4 
   btnscroll("#btnScroll");
+
+  //Exercise 5 
+  dark_theme("#btnDark","dark-mode","#stage","stageColor");          //como la clase 'dark-mode y 'stageColor' las pondremos y quitaremos
+                                                                      // no necesitamos agregarle el . punto de una clase o # de un id
 
 });
 
@@ -36,7 +41,8 @@ d.addEventListener("keypress", e =>{
   shortcuts(e);
 })
 */
-d.addEventListener("keydown", e =>{
+
+d.addEventListener("keydown", e =>{             //KeyDown es otro evento que debe estar aparte para que este mejor organizado
   shortcuts(e);
   moveBall(e, "#ball", "#stage");
 })

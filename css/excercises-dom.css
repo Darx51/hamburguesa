@@ -132,6 +132,38 @@ header{
   opacity: 0;
 }
 
+.btnDark{
+  position: fixed;
+  z-index: 999;     /*entre mas alto en z-index mas encima de los demas elementos estara*/
+  bottom: 1vh;      /*/* estara 1vh retirado del bottom*/*/
+  left:1vw;        /* estara 4.25rem de ancho del boton de hamburguesa + 1vw retirado de la derecha*/
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  font-size:2rem;
+  font-weight:bold;
+  background-color: var(--main-color);
+  color:var(--second-color);
+  outline:0;
+  border:0;
+  cursor:pointer;
+  transition: all 0.3s ease-out;
+}
+
+.btnDark:hover{
+  background-color: var(--second-color);
+  color: var(--main-color);
+}
+
+.dark-mode{
+  background: var(--second-color);
+  color: var(--main-color);
+}
+.stageColor{
+  background: var(--main-color);
+}
+
+
 /*
 display:flex;    /*las lineas del menu se forman del after y before por eso indicamos flex paq se alinean una debajo de otra
 

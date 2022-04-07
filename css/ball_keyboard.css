@@ -4,6 +4,9 @@
   background-color: var(--second-color);
   
 }
+.stage.stageColor{
+  background: var(--main-color);
+}
 
 .ball{
   margin: auto;
