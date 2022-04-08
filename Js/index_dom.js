@@ -22,12 +22,8 @@ d.addEventListener("DOMContentLoaded", e=>{           //Primero se carga el docu
   //Exercise 4 
   btnscroll("#btnScroll");
 
-  //Exercise 5 
-  dark_theme("#btnDark","dark-mode","#stage","stageColor");          //como la clase 'dark-mode y 'stageColor' las pondremos y quitaremos
-                                                                      // no necesitamos agregarle el . punto de una clase o # de un id
-
+  
 });
-
 
 
 
@@ -36,16 +32,17 @@ d.addEventListener("DOMContentLoaded", e=>{           //Primero se carga el docu
 d.addEventListener("keyup", e =>{
   shortcuts(e);
 })
-
 d.addEventListener("keypress", e =>{
   shortcuts(e);
 })
 */
-
 d.addEventListener("keydown", e =>{             //KeyDown es otro evento que debe estar aparte para que este mejor organizado
   shortcuts(e);
   moveBall(e, "#ball", "#stage");
 })
 
+//Exercise 5 
+dark_theme("#btnDark","dark-mode","#stage","stageColor");          //como la clase 'dark-mode y 'stageColor' las pondremos y quitaremos
+// no necesitamos agregarle el . punto de una clase o # de un id
 
 
