@@ -17,7 +17,7 @@ export default function dark_theme(btn, classDark,stage,stageColor){    //OJO 's
           el.classList.add(classDark);            //agregales la clase que me mandaste en 'classDark'
           $btnDark.textContent = sun;             // al boton ahora asignale el icono del sol
         })  
-        localStorage.setItem("theme","dark");
+        localStorage.setItem("theme","dark");    //creamos la variable theme y al mismo tiempo le asignamos el valor dark
   }
   const light = ()=>{
     $stage.classList.remove(stageColor);        //es igual a document.querySelector(stage).classList.remove("stageColor");
@@ -25,7 +25,7 @@ export default function dark_theme(btn, classDark,stage,stageColor){    //OJO 's
           el.classList.remove(classDark);
           $btnDark.textContent = moon;
         }) 
-        localStorage.setItem("theme","light");
+        localStorage.setItem("theme","light");  //creamos la variable theme y al mismo tiempo le asignamos el valor light
   }
 
   document.addEventListener("click", (e)=>{

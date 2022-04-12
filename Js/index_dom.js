@@ -4,13 +4,15 @@ import { shortcuts, moveBall } from "./keyboard.js";
 import { CuentaReg } from "./count_down.js";
 import {btnscroll}  from "./btn_scroll.js";     //como solo es una funcion por default, puede ir o no con {}
 import dark_theme from "./tema_oscuro.js";
-
-
+import responsiveMedia from "./object_responsive.js";
+import responsive_tester from "./width_height_responsive_test.js";
+import userDevice from "./device_detection.js";
+import network_detection from "./network_detection.js";
 
 
 const d=document;
 d.addEventListener("DOMContentLoaded", e=>{           //Primero se carga el documento
-  hamburgerMenu("#panel-btn","#panel","#a");   //despues ahora si mando llamar la funcion y le paso los parametros
+  hamburgerMenu("#panel-btn","#panel",".menu a");   //despues ahora si mando llamar la funcion y le paso los parametros
 
   //Ejercicio 1 Reloj
   clock("#iniciarReloj","#detenerReloj","#mostrarReloj");
@@ -22,7 +24,19 @@ d.addEventListener("DOMContentLoaded", e=>{           //Primero se carga el docu
   //Exercise 4 
   btnscroll("#btnScroll");
 
-  
+  //Exercise 5
+  responsiveMedia("youtube","(min-width:1024px)",`https://www.youtube.com/watch?v=2SetvwBV-SU&t=14s`,`<iframe width="560" height="315" src="https://www.youtube.com/embed/2SetvwBV-SU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>`);   //se debe mandar llamar por cada componente al que se le va aplicar responsive
+  responsiveMedia("gmaps","(min-width:1024px)",`https://goo.gl/maps/YDu8dSKjzSf5axG56`,`<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100939.98555098464!2d-122.507640204439!3d37.757814996609724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20California!5e0!3m2!1ses-419!2sus!4v1649461303654!5m2!1ses-419!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`);     //se debe mandar llamar por cada componente al que se le va aplicar responsive
+
+  //Exercise 6
+  responsive_tester("responsive-tester");
+
+  //Exercise 7
+  userDevice("user-device");
+
+  //Exercise 8
+  network_detection();
+
 });
 
 

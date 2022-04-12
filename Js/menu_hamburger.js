@@ -1,4 +1,5 @@
 
+
 export default function hamburgerMenu(panelBtn, panel, linkSecction){
   const d = document;
   
@@ -15,6 +16,7 @@ export default function hamburgerMenu(panelBtn, panel, linkSecction){
     if(e.target.matches(linkSecction)){
       d.querySelector(panel).classList.remove("is-active");
       d.querySelector(panelBtn).classList.remove("is-active");
+
     }
   })
 }

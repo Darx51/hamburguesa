@@ -163,7 +163,12 @@ header{
   background: var(--main-color);
 }
 
-
+.gmaps{
+  cursor: pointer;
+}
+.youtube{
+  cursor: pointer;
+}
 /*
 display:flex;    /*las lineas del menu se forman del after y before por eso indicamos flex paq se alinean una debajo de otra
 
@@ -194,3 +199,21 @@ display:flex;    /*las lineas del menu se forman del after y before por eso indi
   color: var(--second-color);
   background-color: var(--main-modal-color);
 }
+
+.online, .offline{          /*las 2 clases tendran estas propiedades, lo unico que cambiara sera el color*/
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  background-color: green;
+  color: aliceblue;
+
+}
+
+.offline{
+  background-color: red;
+}
+
