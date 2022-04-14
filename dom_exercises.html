@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css">
   <link rel="stylesheet" href="css/excercises-dom.css">
   <link rel="stylesheet" href="css/ball_keyboard.css">
+  <link rel="stylesheet" href="css/buscarCards.css">
 
 </head>
 <body data-dark>              <!--agrego el atributo datadark-->
@@ -30,14 +31,16 @@
   <!--Menu Aside--> 
   <aside class="panel" id="panel">
     <nav class="menu">
-      <a id="a" href="#seccion1">Section 1</a>
-      <a id="a" href="#seccion2">Section 2</a>
-      <a id="a" href="#seccion3">Section 3</a>
-      <a id="a" href="#seccion4">Section 4</a>
-      <a id="a" href="#seccion5">Section 5</a>
-      <a id="a" href="#seccion6">Section 6</a>
-      <a id="a" href="#seccion7">Section 7</a>
-      <a id="a" href="#seccion8">Section 8</a>
+      <a id="a" href="#seccion1">CLock</a>
+      <a id="a" href="#seccion2">keyboard movements</a>
+      <a id="a" href="#seccion3">Contdown Timer</a>
+      <a id="a" href="#seccion4">Responsive Design</a>
+      <a id="a" href="#seccion5">Responsive window testing</a>
+      <a id="a" href="#seccion6">Devices Detection</a>
+      <a id="a" href="#seccion7">Status network detection</a>
+      <a id="a" href="#seccion8">Video Detection</a>
+      <a id="a" href="#seccion9">Geolocation Position</a>
+      <a id="a" href="#seccion10">Image Search</a>
       
     </nav>
   </aside>
@@ -45,7 +48,6 @@
   <!--Main-->
   <main>
     <section id="seccion1" class="section">
-      <h2>Seccion1</h2>
         <h2>CLock & Alarm</h2>
           <div class="mostrarReloj" id="mostrarReloj"></div>
         <div>
@@ -57,7 +59,7 @@
     </section>
 
     <section id="seccion2" class="section">
-      <h2>Keyboard Events</h2>
+      <h2>Keyboard movements</h2>
         <div class="stage" id="stage">
           <div class="ball" id="ball"></div>
         </div>
@@ -77,7 +79,7 @@
     </section>
 
     <section id="seccion5" class="section">
-      <h2>Responsive Testeting</h2>
+      <h2>Responsive Window Testing</h2>
       <form id="responsive-tester"> 
         <input name="direccion"  type="url" placeholder="URL" required>
           <br>
@@ -91,7 +93,7 @@
     </section>
 
     <section id="seccion6" class="section">
-      <h2>Devices Detecction</h2>
+      <h2>Devices Detection</h2>
       <div id="user-device"></div>
     </section>
 
@@ -100,16 +102,82 @@
     </section>
 
     <section id="seccion8" class="section">
-      <h2>Video Detecction</h2>
-      <video ></video> 
+      <h2>Video Detection</h2>
+      <video id="video" video></video> 
     </section>
 
     <section id="seccion9" class="section">
-      <h2>Seccion9</h2>
+      <h2 id="cords">Geolocation Position</h2>
+     <!-- 
+       <p id = "status"></p>
+       <a id = "map-link" target="_self"></a>
+       <button id ="find-me">Show my location</button><br/>
+      --> 
     </section>
 
-    <section id="seccion10" class="section">
-      <h2>Seccion10</h2>
+    <section id="seccion10" class="section10">
+      <h2 class="tituloCartas">Lookup some Card</h2>
+      <input type="search" class="buscarCartas" id="buscarCartas" placeholder="Text here">
+
+      <div class="cards" id="cards">    
+        <div class="card" id="idCard">
+          <img src="img/loteria/1 el gallo.jpg" alt="">
+          <figcaption>1 THE COCK</figcaption>                 <!--Ojo poner esta etiqueta especial para busquedas-->
+        </div>
+        <div class="card" id="idCard">
+          <img src="img/loteria/2 el diablito.jpg" alt="">
+          <figcaption>2 THE DEVIL</figcaption>
+        </div>
+        <div class="card" id="idCard">
+          <img src="img/loteria/3dama.jpg" alt="">
+          <figcaption>3 THE LADY</figcaption>
+        </div>
+        <div class="card" id="idCard">
+          <img src="img/loteria/4 el catrin.jpg" alt="">
+          <figcaption>4 THE GENTLEMAN</figcaption>
+        </div>
+        <div class="card" id="idCard">
+          <img src="img/loteria/5paraguas.jpg" alt="">
+          <figcaption>5 THE UMBRELLA</figcaption>
+        </div>
+        <div class="card" id="idCard">
+          <img src="img/loteria/6 la sirena.jpg" alt="">
+          <figcaption>6 THE MERMAID</figcaption>
+        </div>
+        <div class="card" id="idCard">
+          <img src="img/loteria/7 la escalera.jpg" alt="">
+          <figcaption>7 THE LADDER</figcaption>
+        </div>
+        <div class="card" id="idCard">
+          <img src="img/loteria/8 la botella.jpg" alt="">
+          <figcaption>8 THE BOTTLE</figcaption>
+        </div>
+        <div class="card" id="idCard">
+          <img src="img/loteria/9 barril.jpg" alt="">
+          <figcaption>9 THE BARREL</figcaption>
+        </div>
+        <div class="card" id="idCard">
+          <img src="img/loteria/10 arbol.jpg" alt="">
+          <figcaption>10 THE TREE</figcaption>
+        </div>
+      </div>
+
+    </section>
+    <section id="seccion11" class="section">
+      <h2>Seccion 11</h2>
+    </section>
+    <section id="seccion12" class="section">
+      <h2>seccion 12</h2>
+    </section>
+
+    <section id="seccion13" class="section">
+      <h2>Seccion13</h2>
+    </section>
+    <section id="seccion14" class="section">
+      <h2>Seccion14</h2>
+    </section>
+    <section id="seccion15" class="section">
+      <h2>Seccion15</h2>
     </section>
 
 

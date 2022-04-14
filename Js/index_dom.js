@@ -8,7 +8,9 @@ import responsiveMedia from "./object_responsive.js";
 import responsive_tester from "./width_height_responsive_test.js";
 import userDevice from "./device_detection.js";
 import network_detection from "./network_detection.js";
-
+import stremVideo from "./webcam_detection.js";
+import geolocation from "./geolocation_position.js";
+import buscarCartas from "./buscar_cards.js";
 
 const d=document;
 d.addEventListener("DOMContentLoaded", e=>{           //Primero se carga el documento
@@ -36,6 +38,16 @@ d.addEventListener("DOMContentLoaded", e=>{           //Primero se carga el docu
 
   //Exercise 8
   network_detection();
+
+  //Exercise 9
+  stremVideo("video");
+
+  //Exercise 10
+  geolocation("cords");
+
+  //Exercise 11
+  buscarCartas(".buscarCartas",".card");
+
 
 });
 

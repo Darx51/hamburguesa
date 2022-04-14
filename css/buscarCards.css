@@ -1,0 +1,59 @@
+
+.section10{
+  overflow: hidden;             /*para que se escondan las cartas que salgan de la seccion*/
+}
+.tituloCartas{
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: 300;
+  /* margin: 20px 0; */
+  font-size: 40px;
+}
+
+.buscarCartas{
+  width: 50%;
+  margin-left: 30%;
+  /* justify-content: center; */
+  /* padding: 0 20%;  */
+  /* padding-left: 80%; */
+}
+.buscarCartas::-webkit-input-placeholder{
+text-align: start;
+}
+
+.cards{
+
+  display: flex;
+  padding: 1rem;
+  /* justify-content:space-around; */
+  max-width: 100%;                    /*abarca el 100% del ancho sin necesidad de centrar el contenedor cards*/
+  height: 35rem;
+  flex-wrap: wrap;
+  align-content: stretch;           /*mantiene un numero par de columnas de tarjetas cada que cambia el tamanio de la pantalla*/
+  
+  justify-content: center;
+}
+
+.card{
+  margin-top: 3.5rem;
+
+  height: 12rem;
+  width: 9rem;
+  /* margin-bottom: 15px; */
+  padding: 0.5rem;
+  /*position: relative; /*permite que los elementos hijos funcionen con base a su posicion relativa tomando a caja-galeria como padre*/
+/*  margin: auto;   aqui debe ir el margin auto, no en la img para centrar y que la img dentro se adapte dentro de caja-galeria  
+                      quito el margin auto para agregar todas las demas imagenes y todas se adapten a las medidas de caja-galeria */
+  cursor: pointer;    /*para que aparesca la manita*/
+  /*overflow: hidden;    /*escondera todo lo que salga fuera de la caja-galeria*/
+
+  transition: all 0.3s ease-in-out;   /*si desaparece, se traslada, o escala tendra esta transicion*/
+}
+
+.ocultar{
+  /*display:none;      /*desaparece totalmente la card Y NO ES ANIMABLE CON TRANSICIONES NI ANIMACIONES*/
+  visibility: hidden;   /*solo la oculta pero no la desaparece del documento*/
+  opacity: 0;           /*1 se muestra , 0 la oculta*/
+  order: 1;           /*las tarjetas se iran recorriendo, ya que todos los elementos tienen orden 0 */
+}
