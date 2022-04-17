@@ -223,3 +223,7 @@ display:flex;    /*las lineas del menu se forman del after y before por eso indi
   background-color: red;
 }
 
+.seccion11{
+  align-items: center;
+  justify-content: center;
+}

@@ -8,7 +8,7 @@ export function moveBall(e, ball, stage){
   const $stage = d.querySelector(stage),
         $ball = d.querySelector(ball),         //le ponemos $ porque es una variabel que se mostrara en el dom
         limitBall = $ball.getBoundingClientRect(),
-        limitStage = $stage.getBoundingClientRect();
+        limitStage = $stage.getBoundingClientRect();    // se usa para obtener las posiciones izquierda, superior, derecha e inferior de un elemento en la página en relación con la ventana del navegador.
 
  /*       console.log(limitBall);
         console.log(limitStage);

@@ -11,6 +11,7 @@ import network_detection from "./network_detection.js";
 import stremVideo from "./webcam_detection.js";
 import geolocation from "./geolocation_position.js";
 import buscarCartas from "./buscar_cards.js";
+import loteria from "./lottery.js";
 
 const d=document;
 d.addEventListener("DOMContentLoaded", e=>{           //Primero se carga el documento
@@ -48,7 +49,8 @@ d.addEventListener("DOMContentLoaded", e=>{           //Primero se carga el docu
   //Exercise 11
   buscarCartas(".buscarCartas",".card");
 
-
+  //Exercise 12
+  loteria("#lenguajes","#btnGanador",".lengProg");
 });
 
 
