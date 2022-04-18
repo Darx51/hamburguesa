@@ -50,7 +50,7 @@ d.addEventListener("DOMContentLoaded", e=>{           //Primero se carga el docu
   buscarCartas(".buscarCartas",".card");
 
   //Exercise 12
-  loteria("#lenguajes","#btnGanador",".lengProg");
+  loteria("#btnGanador",".lengProg");
 });
 
 
